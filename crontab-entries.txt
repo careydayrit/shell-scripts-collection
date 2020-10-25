@@ -1,0 +1,8 @@
+# Visit enrionment URL so that it would not be idle, that would result to 504
+
+0 * * * * wget -O - https://env-sitename.pantheonsite.io >/dev/null 2>&1
+
+
+
+
+
