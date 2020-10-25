@@ -1,6 +1,9 @@
-# Visit enrionment URL so that it would not be idle, that would result to 504
-
+# Visit environment URL so that it would not be idle, that would result to 504
 0 * * * * wget -O - https://env-sitename.pantheonsite.io >/dev/null 2>&1
+
+# Make a commit every month to avoid site freezing
+0 0 1 * * /usr/bin/bash /repo_path/monthly-commit.sh
+
 
 
 
